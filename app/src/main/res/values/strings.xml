@@ -1,9 +1,16 @@
 <resources>
     <string name="app_name">GeoQuiz</string>
-    <string name="question_text">It is the year 2015.</string>
     <string name="true_button">True</string>
     <string name="false_button">False</string>
     <string name="correct_toast">Correct!</string>
     <string name="incorrect_toast">Incorrect!</string>
     <string name="men_settings">Settings</string>
+    <string name="next_button">Next</string>
+
+    //Questions
+    <string name="question_sports">Peyton Manning leads the NFL in passing.</string>
+    <string name="question_music">Elvis Presley has sold the most records of any musician or band.</string>
+    <string name="question_africa">The source of the Nile River is in Egypt.</string>
+    <string name="question_americas">The 17th President of the United States was Andrew Johnson</string>
+    <string name="question_animal">An ostrich\'s eye is bigger than its brain.</string>
 </resources>
