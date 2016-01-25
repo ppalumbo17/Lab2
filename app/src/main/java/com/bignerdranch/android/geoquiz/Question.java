@@ -48,5 +48,8 @@ public class Question {
     public int getAnswerTextResId(){
         return mAnswerTextResId;
     }
+    public int getAnswer(){
+        return mAnswer;
+    }
 
 }

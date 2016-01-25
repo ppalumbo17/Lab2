@@ -22,4 +22,5 @@
     //Answers
     <string name="question_science_answer">Condensation,Evaporation,Deposition,Sublimation</string>
     <string name="question_tv_answer">Jon</string>
+    <string name="submit_button">Submit</string>
 </resources>
