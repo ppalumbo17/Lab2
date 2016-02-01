@@ -42,6 +42,7 @@ public class QuizActivity extends AppCompatActivity {
             return;
         }
         mIsCheater = data.getBooleanExtra(CheatActivity.EXTRA_ANSWER_SHOWN, false);
+        mQuestionBank[mCurrentIndex].setAnswerShown(true);
     }
     @Override
     public void onSaveInstanceState(Bundle savedInstanceState){
@@ -59,8 +60,8 @@ public class QuizActivity extends AppCompatActivity {
             new Question(R.string.question_africa, false, Question.Q_TYPE.TRUE_FALSE),
             new Question(R.string.question_americas, true, Question.Q_TYPE.TRUE_FALSE),
             new Question(R.string.question_animal, true, Question.Q_TYPE.TRUE_FALSE),
-            new Question(R.string.question_science, R.string.question_science_answer, 1, Question.Q_TYPE.MULTI),
-            new Question(R.string.question_tv, R.string.question_tv_answer, Question.Q_TYPE.FREE),
+           // new Question(R.string.question_science, R.string.question_science_answer, 1, Question.Q_TYPE.MULTI),
+            //new Question(R.string.question_tv, R.string.question_tv_answer, Question.Q_TYPE.FREE),
     };
 
     private int mCurrentIndex =0;
@@ -153,7 +154,7 @@ public class QuizActivity extends AppCompatActivity {
         boolean answerIsTrue = mQuestionBank[mCurrentIndex].isTrueFalse();
         //boolean answerIsTrue = mQuestionBank[mCurrentIndex].getAnswer();
         int messageResId = 0;
-        if(mIsCheater){
+        if(mIsCheater||mQuestionBank[mCurrentIndex].getAnswerShown()){
             messageResId = R.string.judgement_toast;
         }else {
             if (userPressedTrue == answerIsTrue) {

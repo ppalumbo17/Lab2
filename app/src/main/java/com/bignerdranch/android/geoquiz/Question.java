@@ -11,6 +11,7 @@ public class Question {
     private int mAnswerTextResId;
     private int mAnswer;
     private Q_TYPE questionType;
+    private boolean mAnswerShown;
 
 
     public Question(int textResId, boolean trueFalse, Q_TYPE type) {
@@ -51,5 +52,13 @@ public class Question {
     public int getAnswer(){
         return mAnswer;
     }
+
+    public void setAnswerShown(boolean shown){
+        mAnswerShown = shown;
+    }
+    public boolean getAnswerShown(){
+        return mAnswerShown;
+    }
+
 
 }
