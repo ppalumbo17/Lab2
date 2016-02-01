@@ -10,6 +10,11 @@
 
     <string name="score">Score: </string>
 
+    //Cheating
+    <string name="cheat_button">Cheat!</string>
+    <string name="warning_text">Are you sure you want to cheat?</string>
+    <string name="show_answer_button">Show Answer</string>
+    <string name="judgement_toast">Well, if you aint cheatin you aint tryin!</string>
     //Questions
     <string name="question_sports">Peyton Manning leads the NFL in passing.</string>
     <string name="question_music">Elvis Presley has sold the most records of any musician or band.</string>

@@ -39,7 +39,10 @@
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:gravity="center_horizontal">
+
+        //True False
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -55,6 +58,13 @@
             android:layout_height="wrap_content"
             android:text="@string/false_button"/>
         </LinearLayout>
+
+        //MultiChoice
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal">
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -69,6 +79,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
         <Button
             android:id="@+id/third_button"
             android:layout_width="wrap_content"
@@ -79,6 +94,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             />
+        </LinearLayout>
         </LinearLayout>
         <LinearLayout
             android:layout_width="wrap_content"
@@ -99,6 +115,16 @@
 
         </LinearLayout>
     </RelativeLayout>
+
+    //Cheat button
+    <Button
+        android:id="@+id/cheat_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cheat_button"
+        android:padding="4dp"/>
+
+    //Prev Next
     <LinearLayout
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
