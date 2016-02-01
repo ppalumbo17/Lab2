@@ -3,6 +3,7 @@ package com.bignerdranch.android.geoquiz;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -12,6 +13,8 @@ import android.widget.TextView;
  */
 public class CheatActivity extends AppCompatActivity{
 
+    public static final String TAG = "CheatActivity.java";
+    //public static final String CHEAT_INDEX = "cheat";
     public static final String EXTRA_ANSWER_IS_TRUE = "com.bignerdranch.android.geoquiz.answer_is_true";
     public static final String EXTRA_ANSWER_SHOWN = "com.bignerdranch.android.geoquiz.answer_shown";
 
@@ -19,6 +22,13 @@ public class CheatActivity extends AppCompatActivity{
     private TextView mAnswerTextView;
     private Button mShowAnswer;
 
+    @Override
+    public void onSaveInstanceState(Bundle savedInstanceState){
+        super.onSaveInstanceState(savedInstanceState);
+        Log.i(TAG, "onSaveInstanceState");
+        savedInstanceState.putBoolean(EXTRA_ANSWER_SHOWN, true);
+
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -42,6 +52,9 @@ public class CheatActivity extends AppCompatActivity{
                 setAnswerShownResult(true);
             }
         });
+        if(savedInstanceState!=null){
+            setAnswerShownResult(savedInstanceState.getBoolean(EXTRA_ANSWER_SHOWN, true));
+        }
     }
 
     private void setAnswerShownResult(boolean isAnswerShown){
